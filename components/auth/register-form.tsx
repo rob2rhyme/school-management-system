@@ -29,13 +29,13 @@ export function RegisterForm() {
     <form onSubmit={handleRegister} className="space-y-6">
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <Label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+          <Label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
             First Name
           </Label>
           <Input id="firstName" name="firstName" type="text" required placeholder="John" />
         </div>
         <div>
-          <Label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+          <Label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
             Last Name
           </Label>
           <Input id="lastName" name="lastName" type="text" required placeholder="Doe" />
@@ -43,21 +43,21 @@ export function RegisterForm() {
       </div>
 
       <div>
-        <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
           Email address
         </Label>
         <Input id="email" name="email" type="email" required placeholder="john.doe@school.edu" />
       </div>
 
       <div>
-        <Label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
           Phone Number
         </Label>
         <Input id="phone" name="phone" type="tel" required placeholder="+1 (555) 123-4567" />
       </div>
 
       <div>
-        <Label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="role" className="block text-sm font-medium text-foreground mb-2">
           Role
         </Label>
         <Select name="role" required>
@@ -73,14 +73,14 @@ export function RegisterForm() {
       </div>
 
       <div>
-        <Label htmlFor="school" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="school" className="block text-sm font-medium text-foreground mb-2">
           School/Institution Name
         </Label>
         <Input id="school" name="school" type="text" required placeholder="Springfield High School" />
       </div>
 
       <div>
-        <Label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
           Additional Information
         </Label>
         <Textarea
@@ -92,7 +92,7 @@ export function RegisterForm() {
       </div>
 
       <div>
-        <Label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
           Password
         </Label>
         <div className="relative">
@@ -109,7 +109,11 @@ export function RegisterForm() {
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? <EyeOff className="h-4 w-4 text-gray-400" /> : <Eye className="h-4 w-4 text-gray-400" />}
+            {showPassword ? (
+              <EyeOff className="h-4 w-4 text-muted-foreground" />
+            ) : (
+              <Eye className="h-4 w-4 text-muted-foreground" />
+            )}
           </button>
         </div>
       </div>
@@ -120,15 +124,15 @@ export function RegisterForm() {
           name="terms"
           type="checkbox"
           required
-          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+          className="h-4 w-4 rounded border-input text-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
         />
-        <Label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
+        <Label htmlFor="terms" className="ml-2 block text-sm text-foreground">
           I agree to the{" "}
-          <a href="#" className="text-blue-600 hover:text-blue-500">
+          <a href="#" className="text-blue-600 hover:text-blue-500 dark:text-blue-400">
             Terms of Service
           </a>{" "}
           and{" "}
-          <a href="#" className="text-blue-600 hover:text-blue-500">
+          <a href="#" className="text-blue-600 hover:text-blue-500 dark:text-blue-400">
             Privacy Policy
           </a>
         </Label>

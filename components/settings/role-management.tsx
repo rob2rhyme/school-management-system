@@ -92,21 +92,21 @@ export function RoleManagement() {
       </CardHeader>
       <CardContent className="space-y-6">
         <div>
-          <h4 className="text-sm font-medium text-gray-900 mb-4">System Roles</h4>
+          <h4 className="text-sm font-medium text-foreground mb-4">System Roles</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {roles.map((role) => (
               <div
                 key={role.id}
                 className={`p-4 border rounded-lg cursor-pointer transition-colors ${
-                  selectedRole.id === role.id ? "border-blue-500 bg-blue-50" : "border-gray-200 hover:border-gray-300"
+                  selectedRole.id === role.id ? "border-primary bg-primary/10" : "border-border hover:border-primary/40"
                 }`}
                 onClick={() => setSelectedRole(role)}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <h5 className="font-medium text-gray-900">{role.name}</h5>
+                  <h5 className="font-medium text-foreground">{role.name}</h5>
                   <Badge variant="secondary">{role.userCount} users</Badge>
                 </div>
-                <p className="text-xs text-gray-600 mb-3">{role.description}</p>
+                <p className="text-xs text-muted-foreground mb-3">{role.description}</p>
                 <div className="flex space-x-2">
                   <Button size="sm" variant="outline" onClick={() => handleEditRole(role.id)}>
                     <Edit className="h-3 w-3" />
@@ -123,24 +123,24 @@ export function RoleManagement() {
         </div>
 
         <div>
-          <h4 className="text-sm font-medium text-gray-900 mb-4">Permissions for {selectedRole.name}</h4>
+          <h4 className="text-sm font-medium text-foreground mb-4">Permissions for {selectedRole.name}</h4>
           <div className="space-y-4">
             {Object.entries(selectedRole.permissions).map(([module, permissions]) => (
-              <div key={module} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div key={module} className="flex items-center justify-between p-4 bg-muted/30 rounded-lg border border-border">
                 <div>
-                  <Label className="text-sm font-medium text-gray-900 capitalize">{module}</Label>
-                  <p className="text-xs text-gray-500">Manage {module} related operations</p>
+                  <Label className="text-sm font-medium text-foreground capitalize">{module}</Label>
+                  <p className="text-xs text-muted-foreground">Manage {module} related operations</p>
                 </div>
                 <div className="flex items-center space-x-6">
                   <div className="flex items-center space-x-2">
                     <Switch id={`${module}-read`} checked={permissions.read} disabled={selectedRole.id === "admin"} />
-                    <Label htmlFor={`${module}-read`} className="text-xs text-gray-600">
+                    <Label htmlFor={`${module}-read`} className="text-xs text-muted-foreground">
                       Read
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Switch id={`${module}-write`} checked={permissions.write} disabled={selectedRole.id === "admin"} />
-                    <Label htmlFor={`${module}-write`} className="text-xs text-gray-600">
+                    <Label htmlFor={`${module}-write`} className="text-xs text-muted-foreground">
                       Write
                     </Label>
                   </div>
@@ -150,7 +150,7 @@ export function RoleManagement() {
                       checked={permissions.delete}
                       disabled={selectedRole.id === "admin"}
                     />
-                    <Label htmlFor={`${module}-delete`} className="text-xs text-gray-600">
+                    <Label htmlFor={`${module}-delete`} className="text-xs text-muted-foreground">
                       Delete
                     </Label>
                   </div>

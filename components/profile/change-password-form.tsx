@@ -37,7 +37,7 @@ export function ChangePasswordForm() {
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <Label htmlFor="currentPassword" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="currentPassword" className="block text-sm font-medium text-foreground mb-2">
               Current Password
             </Label>
             <div className="relative">
@@ -55,16 +55,16 @@ export function ChangePasswordForm() {
                 onClick={() => setShowCurrentPassword(!showCurrentPassword)}
               >
                 {showCurrentPassword ? (
-                  <EyeOff className="h-4 w-4 text-gray-400" />
+                  <EyeOff className="h-4 w-4 text-muted-foreground" />
                 ) : (
-                  <Eye className="h-4 w-4 text-gray-400" />
+                  <Eye className="h-4 w-4 text-muted-foreground" />
                 )}
               </button>
             </div>
           </div>
 
           <div>
-            <Label htmlFor="newPassword" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="newPassword" className="block text-sm font-medium text-foreground mb-2">
               New Password
             </Label>
             <div className="relative">
@@ -82,20 +82,20 @@ export function ChangePasswordForm() {
                 onClick={() => setShowNewPassword(!showNewPassword)}
               >
                 {showNewPassword ? (
-                  <EyeOff className="h-4 w-4 text-gray-400" />
+                  <EyeOff className="h-4 w-4 text-muted-foreground" />
                 ) : (
-                  <Eye className="h-4 w-4 text-gray-400" />
+                  <Eye className="h-4 w-4 text-muted-foreground" />
                 )}
               </button>
             </div>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-xs text-muted-foreground mt-1">
               Password must be at least 8 characters long and contain uppercase, lowercase, number, and special
               character.
             </p>
           </div>
 
           <div>
-            <Label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="confirmPassword" className="block text-sm font-medium text-foreground mb-2">
               Confirm New Password
             </Label>
             <div className="relative">
@@ -113,17 +113,17 @@ export function ChangePasswordForm() {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
                 {showConfirmPassword ? (
-                  <EyeOff className="h-4 w-4 text-gray-400" />
+                  <EyeOff className="h-4 w-4 text-muted-foreground" />
                 ) : (
-                  <Eye className="h-4 w-4 text-gray-400" />
+                  <Eye className="h-4 w-4 text-muted-foreground" />
                 )}
               </button>
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-            <h4 className="text-sm font-medium text-blue-900 mb-2">Password Requirements:</h4>
-            <ul className="text-xs text-blue-700 space-y-1">
+          <div className="rounded-lg border border-border bg-muted/30 p-4">
+            <h4 className="text-sm font-medium text-foreground mb-2">Password Requirements:</h4>
+            <ul className="text-xs text-muted-foreground space-y-1">
               <li>• At least 8 characters long</li>
               <li>• Contains uppercase and lowercase letters</li>
               <li>• Contains at least one number</li>

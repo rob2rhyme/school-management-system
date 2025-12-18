@@ -29,7 +29,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleLogin} className="space-y-6">
       <div>
-        <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
           Email address
         </Label>
         <Input
@@ -44,7 +44,7 @@ export function LoginForm() {
       </div>
 
       <div>
-        <Label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
           Password
         </Label>
         <div className="relative">
@@ -62,7 +62,11 @@ export function LoginForm() {
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? <EyeOff className="h-4 w-4 text-gray-400" /> : <Eye className="h-4 w-4 text-gray-400" />}
+            {showPassword ? (
+              <EyeOff className="h-4 w-4 text-muted-foreground" />
+            ) : (
+              <Eye className="h-4 w-4 text-muted-foreground" />
+            )}
           </button>
         </div>
       </div>
@@ -73,14 +77,14 @@ export function LoginForm() {
             id="remember-me"
             name="remember-me"
             type="checkbox"
-            className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            className="h-4 w-4 rounded border-input text-primary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
           />
-          <Label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
+          <Label htmlFor="remember-me" className="ml-2 block text-sm text-foreground">
             Remember me
           </Label>
         </div>
 
-        <Link href="/auth/forgot-password" className="text-sm text-blue-600 hover:text-blue-500">
+        <Link href="/auth/forgot-password" className="text-sm text-blue-600 hover:text-blue-500 dark:text-blue-400">
           Forgot password?
         </Link>
       </div>

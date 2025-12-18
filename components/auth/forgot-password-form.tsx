@@ -27,8 +27,8 @@ export function ForgotPasswordForm() {
     return (
       <div className="text-center space-y-4">
         <CheckCircle className="h-16 w-16 text-green-600 mx-auto" />
-        <h3 className="text-lg font-semibold text-gray-900">Check your email</h3>
-        <p className="text-gray-600">
+        <h3 className="text-lg font-semibold text-foreground">Check your email</h3>
+        <p className="text-muted-foreground">
           We've sent a password reset link to your email address. Please check your inbox and follow the instructions.
         </p>
       </div>
@@ -38,7 +38,7 @@ export function ForgotPasswordForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
           Email address
         </Label>
         <Input

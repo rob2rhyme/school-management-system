@@ -33,13 +33,13 @@ export function PersonalInfoForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
                 First Name
               </Label>
               <Input id="firstName" name="firstName" defaultValue="John" />
             </div>
             <div>
-              <Label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
                 Last Name
               </Label>
               <Input id="lastName" name="lastName" defaultValue="Doe" />
@@ -47,7 +47,7 @@ export function PersonalInfoForm() {
           </div>
 
           <div>
-            <Label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
               Email Address
             </Label>
             <Input id="email" name="email" type="email" defaultValue="john.doe@school.edu" />
@@ -55,13 +55,13 @@ export function PersonalInfoForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                 Phone Number
               </Label>
               <Input id="phone" name="phone" type="tel" defaultValue="+1 (555) 123-4567" />
             </div>
             <div>
-              <Label htmlFor="department" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="department" className="block text-sm font-medium text-foreground mb-2">
                 Department
               </Label>
               <Select defaultValue="administration">
@@ -79,7 +79,7 @@ export function PersonalInfoForm() {
           </div>
 
           <div>
-            <Label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="address" className="block text-sm font-medium text-foreground mb-2">
               Address
             </Label>
             <Textarea
@@ -93,13 +93,13 @@ export function PersonalInfoForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="dateOfBirth" className="block text-sm font-medium text-foreground mb-2">
                 Date of Birth
               </Label>
               <Input id="dateOfBirth" name="dateOfBirth" type="date" defaultValue="1985-06-15" />
             </div>
             <div>
-              <Label htmlFor="emergencyContact" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="emergencyContact" className="block text-sm font-medium text-foreground mb-2">
                 Emergency Contact
               </Label>
               <Input id="emergencyContact" name="emergencyContact" type="tel" defaultValue="+1 (555) 987-6543" />

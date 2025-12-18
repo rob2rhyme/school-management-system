@@ -31,15 +31,15 @@ export function SecuritySettings() {
       </CardHeader>
       <CardContent className="space-y-6">
         <div>
-          <h4 className="text-sm font-medium text-gray-900 mb-4">Authentication</h4>
+          <h4 className="text-sm font-medium text-foreground mb-4">Authentication</h4>
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <Label htmlFor="twoFactorAuth" className="text-sm font-medium text-gray-700">
+                <Label htmlFor="twoFactorAuth" className="text-sm font-medium text-foreground">
                   <Smartphone className="h-4 w-4 inline mr-1" />
                   Two-Factor Authentication
                 </Label>
-                <p className="text-xs text-gray-500">Add an extra layer of security to your account</p>
+                <p className="text-xs text-muted-foreground">Add an extra layer of security to your account</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Switch id="twoFactorAuth" checked={twoFactorAuth} onCheckedChange={setTwoFactorAuth} />
@@ -53,20 +53,20 @@ export function SecuritySettings() {
 
             <div className="flex items-center justify-between">
               <div>
-                <Label htmlFor="loginAlerts" className="text-sm font-medium text-gray-700">
+                <Label htmlFor="loginAlerts" className="text-sm font-medium text-foreground">
                   Login Alerts
                 </Label>
-                <p className="text-xs text-gray-500">Get notified of new login attempts</p>
+                <p className="text-xs text-muted-foreground">Get notified of new login attempts</p>
               </div>
               <Switch id="loginAlerts" checked={loginAlerts} onCheckedChange={setLoginAlerts} />
             </div>
 
             <div className="flex items-center justify-between">
               <div>
-                <Label htmlFor="sessionTimeout" className="text-sm font-medium text-gray-700">
+                <Label htmlFor="sessionTimeout" className="text-sm font-medium text-foreground">
                   Automatic Session Timeout
                 </Label>
-                <p className="text-xs text-gray-500">Automatically log out after inactivity</p>
+                <p className="text-xs text-muted-foreground">Automatically log out after inactivity</p>
               </div>
               <Switch id="sessionTimeout" checked={sessionTimeout} onCheckedChange={setSessionTimeout} />
             </div>
@@ -74,10 +74,10 @@ export function SecuritySettings() {
         </div>
 
         <div>
-          <h4 className="text-sm font-medium text-gray-900 mb-4">Session Management</h4>
+          <h4 className="text-sm font-medium text-foreground mb-4">Session Management</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="sessionDuration" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="sessionDuration" className="block text-sm font-medium text-foreground mb-2">
                 Session Duration
               </Label>
               <Select defaultValue="8h">
@@ -94,7 +94,7 @@ export function SecuritySettings() {
             </div>
 
             <div>
-              <Label htmlFor="passwordExpiry" className="block text-sm font-medium text-gray-700 mb-2">
+              <Label htmlFor="passwordExpiry" className="block text-sm font-medium text-foreground mb-2">
                 Password Expiry
               </Label>
               <Select defaultValue="90d">
@@ -113,19 +113,19 @@ export function SecuritySettings() {
         </div>
 
         <div>
-          <h4 className="text-sm font-medium text-gray-900 mb-4">Active Sessions</h4>
+          <h4 className="text-sm font-medium text-foreground mb-4">Active Sessions</h4>
           <div className="space-y-3">
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg border border-border">
               <div>
-                <div className="text-sm font-medium text-gray-900">Current Session</div>
-                <div className="text-xs text-gray-500">Chrome on Windows • 192.168.1.100</div>
+                <div className="text-sm font-medium text-foreground">Current Session</div>
+                <div className="text-xs text-muted-foreground">Chrome on Windows • 192.168.1.100</div>
               </div>
               <div className="text-xs text-green-600 font-medium">Active</div>
             </div>
-            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg border border-border">
               <div>
-                <div className="text-sm font-medium text-gray-900">Mobile App</div>
-                <div className="text-xs text-gray-500">iOS App • Last active 2 hours ago</div>
+                <div className="text-sm font-medium text-foreground">Mobile App</div>
+                <div className="text-xs text-muted-foreground">iOS App • Last active 2 hours ago</div>
               </div>
               <Button size="sm" variant="outline">
                 Revoke

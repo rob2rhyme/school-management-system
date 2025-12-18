@@ -57,7 +57,7 @@ export function ProfileCard() {
             </Button>
           </div>
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900">{userProfile.name}</h3>
+            <h3 className="text-lg font-semibold text-foreground">{userProfile.name}</h3>
             <Badge variant="secondary" className="mt-1">
               {userProfile.role}
             </Badge>
@@ -66,25 +66,25 @@ export function ProfileCard() {
 
         <div className="space-y-4">
           <div className="flex items-center space-x-3 text-sm">
-            <Mail className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-600">{userProfile.email}</span>
+            <Mail className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground">{userProfile.email}</span>
           </div>
           <div className="flex items-center space-x-3 text-sm">
-            <Phone className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-600">{userProfile.phone}</span>
+            <Phone className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground">{userProfile.phone}</span>
           </div>
           <div className="flex items-center space-x-3 text-sm">
-            <MapPin className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-600">{userProfile.address}</span>
+            <MapPin className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground">{userProfile.address}</span>
           </div>
           <div className="flex items-center space-x-3 text-sm">
-            <Calendar className="h-4 w-4 text-gray-400" />
-            <span className="text-gray-600">Joined {userProfile.joinDate}</span>
+            <Calendar className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground">Joined {userProfile.joinDate}</span>
           </div>
         </div>
 
-        <div className="pt-4 border-t border-gray-200">
-          <div className="text-sm text-gray-600">
+        <div className="pt-4 border-t border-border">
+          <div className="text-sm text-muted-foreground">
             <div className="flex justify-between mb-2">
               <span>Department:</span>
               <span className="font-medium">{userProfile.department}</span>
