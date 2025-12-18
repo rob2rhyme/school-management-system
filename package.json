@@ -6,6 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
+    "preinstall": "node -e \"const pkg=require('./package.json'); console.log('[preinstall] cwd:', process.cwd()); console.log('[preinstall] pnpm.onlyBuiltDependencies:', JSON.stringify(pkg.pnpm?.onlyBuiltDependencies ?? null));\"",
     "start": "next start"
   },
   "dependencies": {
