@@ -1,0 +1,47 @@
+[
+  {
+    "id": "STU001",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@school.edu",
+    "class": "Grade 10-A",
+    "rollNumber": "001",
+    "phone": "+1 (555) 123-4567",
+    "status": "active",
+    "attendance": 95.2,
+    "dateOfBirth": "2008-03-15",
+    "address": "123 Main St, City, State 12345",
+    "parentName": "Robert Johnson",
+    "parentPhone": "+1 (555) 123-4568",
+    "emergencyContact": "+1 (555) 123-4569"
+  },
+  {
+    "id": "STU002",
+    "name": "Bob Smith",
+    "email": "bob.smith@school.edu",
+    "class": "Grade 10-A",
+    "rollNumber": "002",
+    "phone": "+1 (555) 234-5678",
+    "status": "active",
+    "attendance": 88.7,
+    "dateOfBirth": "2008-07-22",
+    "address": "456 Oak Ave, City, State 12345",
+    "parentName": "Mary Smith",
+    "parentPhone": "+1 (555) 234-5679",
+    "emergencyContact": "+1 (555) 234-5680"
+  },
+  {
+    "id": "STU003",
+    "name": "Carol Davis",
+    "email": "carol.davis@school.edu",
+    "class": "Grade 9-B",
+    "rollNumber": "015",
+    "phone": "+1 (555) 345-6789",
+    "status": "active",
+    "attendance": 92.1,
+    "dateOfBirth": "2009-01-10",
+    "address": "789 Pine St, City, State 12345",
+    "parentName": "James Davis",
+    "parentPhone": "+1 (555) 345-6790",
+    "emergencyContact": "+1 (555) 345-6791"
+  }
+]
