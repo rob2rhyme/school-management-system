@@ -1,33 +1,35 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, GraduationCap, BookOpen, TrendingUp } from "lucide-react"
 
+type ChangeType = "positive" | "neutral" | "negative"
+
 const stats = [
   {
     title: "Total Students",
     value: "1,247",
     change: "+12%",
-    changeType: "positive" as const,
+    changeType: "positive" as ChangeType,
     icon: Users,
   },
   {
     title: "Teaching Staff",
     value: "89",
     change: "+3%",
-    changeType: "positive" as const,
+    changeType: "positive" as ChangeType,
     icon: GraduationCap,
   },
   {
     title: "Active Classes",
     value: "42",
     change: "0%",
-    changeType: "neutral" as const,
+    changeType: "neutral" as ChangeType,
     icon: BookOpen,
   },
   {
     title: "Attendance Rate",
     value: "94.2%",
     change: "+2.1%",
-    changeType: "positive" as const,
+    changeType: "positive" as ChangeType,
     icon: TrendingUp,
   },
 ]

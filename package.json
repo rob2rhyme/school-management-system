@@ -7,6 +7,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "preinstall": "node -e \"const pkg=require('./package.json'); console.log('[preinstall] cwd:', process.cwd()); console.log('[preinstall] pnpm.onlyBuiltDependencies:', JSON.stringify(pkg.pnpm?.onlyBuiltDependencies ?? null));\"",
     "start": "next start"
   },
@@ -65,6 +66,8 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "9.39.2",
+    "eslint-config-next": "15.2.8",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
