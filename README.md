@@ -40,6 +40,14 @@ pnpm build
 - `GLOSSARY.md`
 - `GOOD_FIRST_ISSUES.md`
 
+## Project Governance / Contribution Model
+
+- This project is open-source (MIT licensed).
+- Contributions are **voluntary** and **unpaid** by default.
+- Development follows a **fork → branch → PR** workflow (no direct pushes to `main`).
+- Maintainers may be appointed later by the project owner; maintainership does not imply ownership.
+- The project is intended to support a hosted, commercial SaaS offering in the future.
+
 ## How To Contribute
 
 See `CONTRIBUTING.md`.

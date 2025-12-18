@@ -76,6 +76,17 @@ pnpm build
 - [ ] Tenant isolation is enforced (DB policies + server checks)
 - [ ] Tests cover tenant-boundary failures (cross-tenant access must be impossible)
 
+## Compensation and Ownership
+
+Contributions to this project are **voluntary** and made **without expectation of compensation**.
+
+By submitting a pull request, you agree that:
+- Your contribution is provided under the project’s open-source license.
+- You do not expect payment, royalties, or future compensation.
+- The project owner may use, modify, and redistribute your contribution as part of the project or a hosted SaaS offering.
+
+Future paid maintainer or contractor roles, if any, will be offered separately and explicitly.
+
 ## Definition of Done (Roadmap-Aligned)
 
 Your PR is “done” when:
@@ -97,4 +108,3 @@ Start from:
 If the issue is ambiguous:
 1. Ask clarifying questions in the issue.
 2. Propose acceptance criteria updates before implementation.
-
