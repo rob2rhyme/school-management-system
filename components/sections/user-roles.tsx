@@ -29,11 +29,11 @@ const roles = [
 
 export function UserRoles() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-gray-900 mb-4">Designed for Every User</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-foreground mb-4">Designed for Every User</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Role-based access ensures everyone gets exactly what they need, when they need it, with appropriate
             permissions and interfaces.
           </p>
@@ -43,21 +43,21 @@ export function UserRoles() {
           {roles.map((role, index) => (
             <div
               key={role.title}
-              className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-card p-8 rounded-2xl shadow-sm border border-border hover:shadow-md transition-shadow"
             >
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl">
-                    <role.icon className="h-6 w-6 text-blue-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl">
+                    <role.icon className="h-6 w-6 text-primary" />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{role.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{role.description}</p>
+                  <h3 className="text-xl font-semibold text-card-foreground mb-2">{role.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{role.description}</p>
                   <ul className="space-y-2">
                     {role.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3" />
+                      <li key={feature} className="flex items-center text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
                         {feature}
                       </li>
                     ))}

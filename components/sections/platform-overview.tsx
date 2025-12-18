@@ -54,13 +54,13 @@ const features = [
 
 export function PlatformOverview() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-foreground mb-4">
             Everything You Need to Run Your School
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Our comprehensive platform covers every aspect of school management, from student enrollment to graduation
             day.
           </p>
@@ -70,14 +70,14 @@ export function PlatformOverview() {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
+              className="group p-6 bg-card rounded-2xl hover:bg-accent/50 hover:shadow-lg transition-all duration-300 border border-border"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-xl mb-4 group-hover:bg-blue-600 transition-colors">
-                <feature.icon className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-4 group-hover:bg-primary transition-colors">
+                <feature.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+              <h3 className="text-lg font-semibold text-card-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

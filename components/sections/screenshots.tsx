@@ -23,20 +23,20 @@ export function Screenshots() {
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-outfit font-bold text-foreground mb-4">
             See School Management System in Action
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Explore our intuitive interface designed for efficiency and ease of use.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {screenshots.map((screenshot, index) => (
-            <div key={screenshot.title} className="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3]">
+            <div key={screenshot.title} className="group relative overflow-hidden rounded-2xl bg-muted aspect-[4/3]">
               <img
                 src={screenshot.image || "/placeholder.svg"}
                 alt={screenshot.title}
