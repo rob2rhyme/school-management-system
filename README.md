@@ -91,7 +91,7 @@ A comprehensive, modern school management system built with Next.js 15, TypeScri
 
 ### Prerequisites
 - Node.js 18+ 
-- npm or yarn package manager
+- pnpm package manager
 
 ### Installation
 
@@ -103,12 +103,12 @@ cd school-management-system
 
 2. Install dependencies
 \`\`\`bash
-npm install
+pnpm install
 \`\`\`
 
 3. Start the development server
 \`\`\`bash
-npm run dev
+pnpm dev
 \`\`\`
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -203,9 +203,15 @@ npm run test:watch  # Run tests in watch mode
 
 ### Build for Production
 \`\`\`bash
-npm run build
-npm start
+pnpm build
+pnpm start
 \`\`\`
+
+### Vercel + pnpm (sharp)
+This repo uses pnpm and includes a pnpm allow-list for built dependencies so CI can run `sharp`'s install/build scripts (required for Next.js image optimization) without warnings.
+
+- Config lives in `package.json` under `pnpm.onlyBuiltDependencies` and includes `sharp`.
+- Avoid adding `--ignore-scripts` to installs in CI.
 
 ### Environment Variables
 Create a \`.env.local\` file:
