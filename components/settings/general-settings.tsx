@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import * as React from "react"
+import { useTheme } from "next-themes"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
@@ -9,9 +10,12 @@ import { Switch } from "@/components/ui/switch"
 import { Palette, Globe, Clock } from "lucide-react"
 
 export function GeneralSettings() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
-  const [isAutoSave, setIsAutoSave] = useState(true)
-  const [isCompactView, setIsCompactView] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+  const [isAutoSave, setIsAutoSave] = React.useState(true)
+  const [isCompactView, setIsCompactView] = React.useState(false)
+
+  React.useEffect(() => setMounted(true), [])
 
   const handleSaveSettings = () => {
     console.log("General settings saved")
@@ -28,10 +32,10 @@ export function GeneralSettings() {
       <CardContent className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <Label htmlFor="theme" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="theme" className="block text-sm font-medium text-foreground mb-2">
               Theme Preference
             </Label>
-            <Select defaultValue="light">
+            <Select value={mounted ? theme ?? "system" : "system"} onValueChange={setTheme}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
@@ -44,7 +48,7 @@ export function GeneralSettings() {
           </div>
 
           <div>
-            <Label htmlFor="language" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="language" className="block text-sm font-medium text-foreground mb-2">
               <Globe className="h-4 w-4 inline mr-1" />
               Language
             </Label>
@@ -62,7 +66,7 @@ export function GeneralSettings() {
           </div>
 
           <div>
-            <Label htmlFor="timezone" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="timezone" className="block text-sm font-medium text-foreground mb-2">
               <Clock className="h-4 w-4 inline mr-1" />
               Timezone
             </Label>
@@ -80,7 +84,7 @@ export function GeneralSettings() {
           </div>
 
           <div>
-            <Label htmlFor="dateFormat" className="block text-sm font-medium text-gray-700 mb-2">
+            <Label htmlFor="dateFormat" className="block text-sm font-medium text-foreground mb-2">
               Date Format
             </Label>
             <Select defaultValue="mm-dd-yyyy">
@@ -99,30 +103,35 @@ export function GeneralSettings() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <Label htmlFor="darkMode" className="text-sm font-medium text-gray-700">
+              <Label htmlFor="darkMode" className="text-sm font-medium text-foreground">
                 Dark Mode
               </Label>
-              <p className="text-xs text-gray-500">Enable dark theme for better viewing in low light</p>
+              <p className="text-xs text-muted-foreground">Enable dark theme for better viewing in low light</p>
             </div>
-            <Switch id="darkMode" checked={isDarkMode} onCheckedChange={setIsDarkMode} />
+            <Switch
+              id="darkMode"
+              checked={mounted && resolvedTheme === "dark"}
+              onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+              disabled={!mounted}
+            />
           </div>
 
           <div className="flex items-center justify-between">
             <div>
-              <Label htmlFor="autoSave" className="text-sm font-medium text-gray-700">
+              <Label htmlFor="autoSave" className="text-sm font-medium text-foreground">
                 Auto Save
               </Label>
-              <p className="text-xs text-gray-500">Automatically save changes as you work</p>
+              <p className="text-xs text-muted-foreground">Automatically save changes as you work</p>
             </div>
             <Switch id="autoSave" checked={isAutoSave} onCheckedChange={setIsAutoSave} />
           </div>
 
           <div className="flex items-center justify-between">
             <div>
-              <Label htmlFor="compactView" className="text-sm font-medium text-gray-700">
+              <Label htmlFor="compactView" className="text-sm font-medium text-foreground">
                 Compact View
               </Label>
-              <p className="text-xs text-gray-500">Show more information in less space</p>
+              <p className="text-xs text-muted-foreground">Show more information in less space</p>
             </div>
             <Switch id="compactView" checked={isCompactView} onCheckedChange={setIsCompactView} />
           </div>
