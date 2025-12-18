@@ -1,0 +1,25 @@
+name: Documentation
+description: Docs updates and improvements
+labels: ["docs"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What docs are missing or incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change
+      description: What should we add/update and where?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Bullet list of what “done” looks like.
+    validations:
+      required: true

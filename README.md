@@ -1,6 +1,48 @@
 # School Management System
 
-A comprehensive, modern school management system built with Next.js 15, TypeScript, and Tailwind CSS.
+Multi-tenant, multi-vertical **School Management SaaS** (dojo, music school, language school, dance school, acting school, and more) built as a single configurable platform.
+
+## What This Project Is
+
+The long-term goal is a secure **multi-tenant SaaS** with configurable vertical templates (terminology + modules + workflows) so many school types can run on one codebase.
+
+## Status
+
+**Prototype / UI-first:** the repo currently contains Next.js pages and components with mocked/local data. The backend (tenancy, auth, billing, database) will be built in phases following the roadmap.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **UI**: React 18, Tailwind CSS, shadcn/ui (Radix), lucide-react
+- **Language**: TypeScript
+- **Theming**: `next-themes` (light/dark/system)
+
+## Local Dev Setup
+
+### Prerequisites
+- Node.js 18+
+- pnpm (see `packageManager` in `package.json`)
+
+### Commands
+```bash
+pnpm install
+pnpm dev
+pnpm lint
+pnpm build
+```
+
+## Roadmap
+
+- `ROADMAP.md`
+- `MILESTONES.md`
+- `ARCHITECTURE.md`
+- `CONTRIBUTING_ROADMAP.md`
+- `GLOSSARY.md`
+- `GOOD_FIRST_ISSUES.md`
+
+## How To Contribute
+
+See `CONTRIBUTING.md`.
 
 ## 🚀 Features
 
@@ -27,17 +69,6 @@ A comprehensive, modern school management system built with Next.js 15, TypeScri
 - **Performance**: Optimized loading, caching, and efficient rendering
 - **Security**: Role-based access control and secure authentication
 - **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom design system
-- **UI Components**: shadcn/ui components
-- **Icons**: Lucide React
-- **Fonts**: Inter (body), Outfit (headings)
-- **State Management**: React hooks and context
-- **Form Handling**: Native form handling with validation
 
 ## 📁 Project Structure
 
@@ -89,33 +120,7 @@ A comprehensive, modern school management system built with Next.js 15, TypeScri
 
 ## 🚦 Getting Started
 
-### Prerequisites
-- Node.js 18+ 
-- pnpm package manager
-
-### Installation
-
-1. Clone the repository
-\`\`\`bash
-git clone <repository-url>
-cd school-management-system
-\`\`\`
-
-2. Install dependencies
-\`\`\`bash
-pnpm install
-\`\`\`
-
-3. Start the development server
-\`\`\`bash
-pnpm dev
-\`\`\`
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-### Default Login
-- Email: admin@school.edu
-- Password: admin123
+See “Local Dev Setup” above.
 
 ## 📱 Pages Overview
 

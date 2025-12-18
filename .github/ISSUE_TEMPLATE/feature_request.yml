@@ -1,0 +1,54 @@
+name: Feature request
+description: Propose a feature aligned to the roadmap
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem are we solving and for whom?
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Roadmap phase
+      options:
+        - "Phase 0 — Foundation"
+        - "Phase 1 — Multi-tenancy + Auth + RBAC"
+        - "Phase 2 — Core School Operations"
+        - "Phase 3 — Payments and Subscriptions"
+        - "Phase 4 — Communications + Automations"
+        - "Phase 5 — Reporting + Admin + Audit"
+        - "Phase 6 — Vertical Templates + Marketplace"
+    validations:
+      required: true
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone reference
+      description: Reference a milestone from MILESTONES.md (name or number).
+      placeholder: e.g. Milestone 9 — Scheduling: ClassGroups + Sessions
+    validations:
+      required: false
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope boundaries
+      description: What's in scope and out of scope?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Bullet list of verifiable acceptance criteria.
+    validations:
+      required: true
+  - type: textarea
+    id: ux
+    attributes:
+      label: UI/UX notes (optional)
+      description: Screens to add/change, behavior, edge cases.
+    validations:
+      required: false
