@@ -81,29 +81,34 @@ See `CONTRIBUTING.md`.
 ## 📁 Project Structure
 
 \`\`\`
-├── app/                    # Next.js app directory
-│   ├── auth/              # Authentication pages
-│   ├── dashboard/         # Main dashboard
-│   ├── students/          # Student management
-│   ├── teachers/          # Teacher management
-│   ├── classes/           # Class management
-│   ├── subjects/          # Subject management
-│   ├── attendance/        # Attendance tracking
-│   ├── results/           # Results management
-│   ├── fees/              # Fee management
-│   ├── timetable/         # Timetable system
-│   ├── noticeboard/       # Announcements
-│   ├── profile/           # User profile
-│   └── settings/          # System settings
-├── components/            # Reusable components
-│   ├── ui/               # Base UI components
-│   ├── layout/           # Layout components
-│   ├── auth/             # Authentication components
-│   ├── dashboard/        # Dashboard widgets
-│   └── [feature]/        # Feature-specific components
-├── lib/                  # Utility functions
-├── types/                # TypeScript type definitions
-└── data/                 # Sample data and constants
+.
+├── .github/                    # GitHub templates + CI
+├── app/                        # Next.js App Router routes
+│   ├── auth/                   # Authentication pages
+│   ├── dashboard/              # Dashboard
+│   ├── students/               # Student management
+│   ├── teachers/               # Teacher management
+│   ├── classes/                # Class management
+│   ├── subjects/               # Subject management
+│   ├── attendance/             # Attendance
+│   ├── results/                # Results
+│   ├── fees/                   # Fees
+│   ├── timetable/              # Timetable
+│   ├── noticeboard/            # Announcements
+│   ├── profile/                # Profile
+│   └── settings/               # Settings
+├── components/                 # Reusable components
+│   ├── ui/                     # shadcn/ui primitives
+│   ├── layout/                 # Shared layout components
+│   ├── auth/                   # Auth-related components
+│   ├── dashboard/              # Dashboard widgets
+│   └── sections/               # Landing page sections
+├── data/                       # Sample data (mock JSON)
+├── hooks/                      # Reusable hooks
+├── lib/                        # Utilities (e.g. cn())
+├── public/                     # Static assets
+├── styles/                     # Global styles
+└── types/                      # Shared TypeScript types
 \`\`\`
 
 ## 🎨 Design System
