@@ -271,8 +271,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and questions:
 - Create an issue on GitHub
-- Email: adebayotemidayo601@gmail.com
-
+- Email: rob2rhyme@gmail.com
 
 ---
 
