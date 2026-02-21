@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "preinstall": "node -e \"const pkg=require('./package.json'); console.log('[preinstall] cwd:', process.cwd()); console.log('[preinstall] pnpm.onlyBuiltDependencies:', JSON.stringify(pkg.pnpm?.onlyBuiltDependencies ?? null));\"",
     "start": "next start"
@@ -74,13 +74,11 @@
     "typescript": "^5"
   },
   "overrides": {
-    "ajv": "8.18.0",
     "lodash": "4.17.23",
     "minimatch": "$minimatch"
   },
   "pnpm": {
     "overrides": {
-      "ajv": "8.18.0",
       "lodash": "4.17.23",
       "minimatch": "10.2.1"
     },
