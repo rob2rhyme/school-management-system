@@ -1,9 +1,11 @@
 {
   "name": "school-management-system",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "scripts": {
-    "lint": "next lint",
-    ...
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   ...
 }
