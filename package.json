@@ -74,9 +74,8 @@
     "typescript": "^5"
   },
   "overrides": {
-  "lodash": "4.17.23",
-  "minimatch": "10.2.1"
-},
+    "lodash": "4.17.23"
+  },
   "pnpm": {
     "overrides": {
       "lodash": "4.17.23",
