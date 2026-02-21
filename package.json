@@ -72,7 +72,17 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
+  "overrides": {
+    "ajv": "8.17.1",
+    "lodash": "4.17.22",
+    "minimatch": "9.0.5"
+  },
   "pnpm": {
+    "overrides": {
+      "ajv": "8.17.1",
+      "lodash": "4.17.22",
+      "minimatch": "9.0.5"
+    },
     "onlyBuiltDependencies": [
       "sharp"
     ]
